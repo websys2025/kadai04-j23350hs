@@ -37,6 +37,9 @@
 
                     // 配列の内容を項目毎に出力
                     // 課題4-1. ここにコードを書く
+                    list.forEach(item => {
+                    console.log(`id: ${item.id}, name: ${item.name}, ${item.price}円, 残り${item.stock}個`);
+                });
                     console.log(""); // 空行の出力
                 }
                 
@@ -63,6 +66,10 @@
 
             // 課題4-1. ここにコード書く
             // 商品オブジェクトの生成
+            for (let a = 0; a < items.length; a++) {
+            const it = items[a];
+            item_list[a] = new Item(it.name, it.price, it.stock);
+        }
 
             // 課題4-2. ここにコードを書く
             // 商品表の作成
